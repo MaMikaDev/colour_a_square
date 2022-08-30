@@ -4,12 +4,12 @@ const grid = document.querySelector('#grid');
 
     for (let i = 1; i < 17; i++) {  //repat the process exactly 16 times
 
-        let aColumn = document.createElement('div'); //create a column
+        let aRow = document.createElement('div'); //create a row
 
-        aColumn.classList.add('column');
-        aColumn.id = 'column' + i; //each column gets a consequtive number
-        console.log(aColumn.id)  // checking if the column are being intiated correctly
-        // aColumn.setAttribute('style', 'border: solid black; background: white;');  
+        aRow.classList.add('row');
+        aRow.id = 'row' + i; //each row gets a consequtive number
+        console.log(aRow.id)  // checking if the row are being intiated correctly
+        // aRow.setAttribute('style', 'border: solid black; background: white;');  
 
 
             for(let j = 1; j < 17; j++){
@@ -18,13 +18,13 @@ const grid = document.querySelector('#grid');
                 aCell.classList.add('cell');
 
                 console.log(aCell.id);
+                
+                // aCell.setAttribute('style', 'width: 40px; height: 40px');
+        
 
-                aCell.setAttribute('style', 'width: 20px; height: 20px');
-                // aCell.textContent = '222';
-
-                aColumn.appendChild(aCell); //add a cell to a row
+                aRow.appendChild(aCell); //add a cell to a row
             }
 
-            grid.appendChild(aColumn);  //attach the row to the grid
+            grid.appendChild(aRow);  //attach the row to the grid
 
         }
