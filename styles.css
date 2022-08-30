@@ -1,0 +1,14 @@
+#container {
+  max-width: 320px;
+  border: solid #fa8072;
+  background-color: #ffffff;
+}
+
+#grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cell:hover {
+  background-color: #ff0000;
+}

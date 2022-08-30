@@ -1,8 +1,6 @@
 const grid = document.querySelector('#grid');
 
 
-grid.setAttribute('style', 'display: flex; flex-wrap: wrap');
-
 
     for (let i = 1; i < 17; i++) {  //repat the process exactly 16 times
 
@@ -16,11 +14,12 @@ grid.setAttribute('style', 'display: flex; flex-wrap: wrap');
 
             for(let j = 1; j < 17; j++){
                 let aCell = document.createElement('div'); //create a cell div
-                aCell.id = 'row ' + i + 'cell ' + j; //naming each cell for checking purposes really
+                aCell.id = i + 'cell' + j; //naming each cell for checking purposes really
+                aCell.classList.add('cell');
 
                 console.log(aCell.id);
 
-                aCell.setAttribute('style', 'border: solid pink; background: yellow; width: 20px; height: 20px');
+                aCell.setAttribute('style', 'width: 20px; height: 20px');
                 // aCell.textContent = '222';
 
                 aColumn.appendChild(aCell); //add a cell to a row
