@@ -5,33 +5,42 @@ let size;
 
 function createAGrid(){
 
-    for (let i = 1; i < 17; i++) {  //repat the process exactly 16 times
-
-        let aRow = document.createElement('div'); //create a row
-
-        // aRow.classList.add('row');
-        // aRow.id = 'row' + i; //each row gets a consequtive number
-        // console.log(aRow.id)  // checking if the row are being intiated correctly
-        // // aRow.setAttribute('style', 'border: solid black; background: white;');  
+    let totalNum = size*size; //let the power of math work!
+    console.log(totalNum);
 
 
-        //     for(let j = 1; j < 17; j++){
-        //         let aCell = document.createElement('div'); //create a cell div
-        //         aCell.id = i + 'cell' + j; //naming each cell for checking purposes really
-        //         aCell.classList.add('cell');
 
-        //         console.log(aCell.id);
-                
-        //         // aCell.setAttribute('style', 'width: 40px; height: 40px');
+    for (let i = 0; i < size; i++) {  //repat the process
+
         
+        let aRow = document.createElement('div'); //create a
+        aRow.id = i;
+        aRow.classList.add('row');
 
-        //         aRow.appendChild(aCell); //add a cell to a row
-        //     }
 
-        //     grid.appendChild(aRow);  //attach the row to the grid
-        //commented out for the sake of a different approach
 
-        // }
+        // aRow.setAttribute('style', 'width: calc(100% / size); height: calc(100% /size)');
+  
+
+        console.log(i + 'row');
+
+        for (let j = 0; j < size; j++) {
+
+            let aCell = document.createElement('div'); //create a cell div
+                 aCell.id = 'cell' + j; 
+                    aCell.classList.add('cell');
+    
+                    console.log(aCell.id);
+                    
+                    // aCell.setAttribute('style', 'width: 40px; height: 40px');
+            
+    
+                    aRow.appendChild(aCell); //add a cell to a row
+        }
+
+        grid.appendChild(aRow);
+
+    }
     }
 
 
@@ -42,10 +51,17 @@ function createAGrid(){
             if (size === !NaN || size > 100 || size < 1){
                 console.log('that is the wrong input!');
             }
-            // else {
-            //     console.log(size);
-
-            // }
+            else {
+             
+                console.log(size);
+                createAGrid();
+            }
 
 
         }
+
+
+
+
+
+

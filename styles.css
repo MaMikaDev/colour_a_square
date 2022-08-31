@@ -18,29 +18,32 @@ button {
   box-shadow: 3px 5px 8px rgb(207, 51, 103);
 }
 
-/* /* #container {
+#grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: stretch;
   background-color: #fa8072;
   width: 640px;
   height: 640px;
-  border: solid #383130; */
- */
-
-#grid {
-  display: flex;
-  max-width: 100%;
-  max-height: 100%;
+  border: solid #383130; 
 }
 
 .row {
-  max-height: 640%;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+
 }
+
 
 .cell {
   /* default cell size that can be overriden by JS if a different option is chosen */
-  background-color: rgb(193, 64, 178);
-  /* width: 40px;
-  height: 40px; */
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: rgb(79, 193, 64);
   border: 0.5 px rgb(245, 155, 155) solid;
+
 }
 
 .cell:hover {
