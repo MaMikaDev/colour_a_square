@@ -1,15 +1,13 @@
 const container = document.querySelector('#container');
-// const grid = document.querySelector('#grid');
 let size = 16;
 
-const grid = document.createElement('div');
-grid.id = 'grid';
 
-
-createAGrid();
+createAGrid(); //call create a grid with default value of 16
 
 function createAGrid(){
 
+    const grid = document.createElement('div'); // grid being created a new every time the createAGrid is run
+    grid.id = 'grid';
 
     let totalNum = size*size; //let the power of math work!
     console.log(totalNum);
@@ -22,19 +20,13 @@ function createAGrid(){
         aRow.id = i;
         aRow.classList.add('row');
 
-        // console.log(i + 'row');
-
         for (let j = 0; j < size; j++) {
 
             let aCell = document.createElement('div'); //create a cell div
                  aCell.id = 'cell' + j; 
                     aCell.classList.add('cell');
-    
-                    // console.log(aCell.id);
-                    
-                    // aCell.setAttribute('style', 'width: 40px; height: 40px');
+
             
-    
                     aRow.appendChild(aCell); //add a cell to a row
         }
 
@@ -46,18 +38,20 @@ function createAGrid(){
     }
 
 
-        function whatSize() {
+        function whatSize() { //asks for user's input 
 
-            size = prompt('enter the size of the grid', 'max 36');
+            size = prompt('Choose the size of the grid between 1 and 36', 'max 36');
 
             if (size === !NaN || size > 36 || size < 1){
                 console.log('that is the wrong input!');
-                whatSize();
+                alert('That is the wrong output! Try again.')
+                whatSize(); // calls the function again from within
             }
             else {
     
-                resetGrid();
-                console.log(size);
+                console.log(size); // logs the entered value
+                resetGrid();  //removes the grid element
+
                 createAGrid();
             }
 
@@ -65,7 +59,6 @@ function createAGrid(){
         }
 
     function resetGrid() {
-        
         
         container.removeChild(grid);
 
