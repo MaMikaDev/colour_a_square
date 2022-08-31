@@ -1,28 +1,28 @@
-const grid = document.querySelector('#grid');
+const container = document.querySelector('#container');
+// const grid = document.querySelector('#grid');
+let size = 16;
 
-let size;
+const grid = document.createElement('div');
+grid.id = 'grid';
 
+
+createAGrid();
 
 function createAGrid(){
+
 
     let totalNum = size*size; //let the power of math work!
     console.log(totalNum);
 
 
-
     for (let i = 0; i < size; i++) {  //repat the process
 
         
-        let aRow = document.createElement('div'); //create a
+        let aRow = document.createElement('div'); //create arow
         aRow.id = i;
         aRow.classList.add('row');
 
-
-
-        // aRow.setAttribute('style', 'width: calc(100% / size); height: calc(100% /size)');
-  
-
-        console.log(i + 'row');
+        // console.log(i + 'row');
 
         for (let j = 0; j < size; j++) {
 
@@ -30,7 +30,7 @@ function createAGrid(){
                  aCell.id = 'cell' + j; 
                     aCell.classList.add('cell');
     
-                    console.log(aCell.id);
+                    // console.log(aCell.id);
                     
                     // aCell.setAttribute('style', 'width: 40px; height: 40px');
             
@@ -41,6 +41,8 @@ function createAGrid(){
         grid.appendChild(aRow);
 
     }
+
+    container.appendChild(grid);
     }
 
 
@@ -53,13 +55,24 @@ function createAGrid(){
                 whatSize();
             }
             else {
-             
+    
+                resetGrid();
                 console.log(size);
                 createAGrid();
             }
 
 
         }
+
+    function resetGrid() {
+        
+        
+        container.removeChild(grid);
+
+    }
+    
+       
+    
 
 
 

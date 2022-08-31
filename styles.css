@@ -8,7 +8,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgb(238, 168, 243);
+  background-color: rgb(242, 208, 245);
 }
 
 button {
@@ -22,28 +22,24 @@ button {
   display: flex;
   flex-wrap: wrap;
   align-content: stretch;
-  background-color: #fa8072;
+  background-color: #84eba3;
   width: 640px;
   height: 640px;
-  border: solid #383130; 
+  border: solid #248140;
 }
 
 .row {
   display: flex;
   flex: 1;
   flex-direction: column;
-
 }
 
-
 .cell {
-  /* default cell size that can be overriden by JS if a different option is chosen */
   flex: 1;
   display: flex;
   flex-wrap: wrap;
   background-color: rgb(79, 193, 64);
-  border: 0.5 px rgb(245, 155, 155) solid;
-
+  border: 0.01rem rgb(23, 101, 65) solid;
 }
 
 .cell:hover {
