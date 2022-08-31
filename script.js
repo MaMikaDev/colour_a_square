@@ -46,10 +46,11 @@ function createAGrid(){
 
         function whatSize() {
 
-            size = prompt('enter the size of the grid', 'max 100');
+            size = prompt('enter the size of the grid', 'max 36');
 
-            if (size === !NaN || size > 100 || size < 1){
+            if (size === !NaN || size > 36 || size < 1){
                 console.log('that is the wrong input!');
+                whatSize();
             }
             else {
              
