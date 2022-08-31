@@ -11,12 +11,19 @@ body {
   background-color: rgb(238, 168, 243);
 }
 
-#container {
+button {
+  font-size: xx-large;
+  padding: 5px;
+  margin: 5px;
+  box-shadow: 3px 5px 8px rgb(207, 51, 103);
+}
+
+/* /* #container {
   background-color: #fa8072;
   width: 640px;
   height: 640px;
-  border: solid #383130;
-}
+  border: solid #383130; */
+ */
 
 #grid {
   display: flex;
@@ -31,8 +38,8 @@ body {
 .cell {
   /* default cell size that can be overriden by JS if a different option is chosen */
   background-color: rgb(193, 64, 178);
-  width: 40px;
-  height: 40px;
+  /* width: 40px;
+  height: 40px; */
   border: 0.5 px rgb(245, 155, 155) solid;
 }
 
