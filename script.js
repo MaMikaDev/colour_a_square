@@ -44,7 +44,7 @@ function createAGrid(){
 
             if (size === !NaN || size > 36 || size < 1){
                 console.log('that is the wrong input!');
-                alert('That is the wrong output! Try again.')
+                alert('That is the wrong input! Try again.')
                 whatSize(); // calls the function again from within
             }
             else {

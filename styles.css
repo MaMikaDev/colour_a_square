@@ -44,4 +44,5 @@ button {
 
 .cell:hover {
   background-color: #1e1f19;
+  opacity: 0.6;
 }
