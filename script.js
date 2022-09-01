@@ -2,6 +2,9 @@ const container = document.querySelector('#container');
 let size = 16;
 let j;
 
+      
+let grayscale = [ '#696969', '#707070', '#787878', '#808080', '	#888888', '#909090'];
+
 createAGrid(); //call create a grid with default value of 16
 
 function createAGrid(){
@@ -24,7 +27,10 @@ function createAGrid(){
 
             let aCell = document.createElement('div'); //create a cell div
                  aCell.id = 'cell' + j; 
-                 aCell.addEventListener('mouseover', changeRed);
+                 aCell.addEventListener ('mouseover', () => {
+                    aCell.style.backgroundColor = grayscale[Math.floor(Math.random() * grayscale.length)]
+                 });
+
                  aCell.classList.add('cell');
 
             
@@ -65,32 +71,3 @@ function createAGrid(){
 
     }
     
-       
-    
-
-
-    let grayscale = [ '#696969', '#707070', '#787878', '#808080', '	#888888', '#909090'];
-
-    
-    // document.addEventListener("mouseover", function () 
-    
-    function changeRed() {
-  
-        console.log('HaHA I do not know how it works!!!!');
-
-       let cells = document.getElementById('grid').querySelectorAll('div');
-        
-       console.log(cells);
-
-       for (i = 0; i < cells.length; i++) {
-
-        cells[i].style.background = grayscale[Math.floor(Math.random() * grayscale.length)];
-
-       }
-        // document.getElementsById('cell' + j).style.backgroundColor = 'red';
-
-    // document.querySelectorAll.style.background = grayscale[Math.floor(Math.random() * grayscale.length)];
-}
-
-
-
