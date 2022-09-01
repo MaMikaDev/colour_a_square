@@ -1,6 +1,6 @@
 const container = document.querySelector('#container');
 let size = 16;
-
+let j;
 
 createAGrid(); //call create a grid with default value of 16
 
@@ -20,11 +20,12 @@ function createAGrid(){
         aRow.id = i;
         aRow.classList.add('row');
 
-        for (let j = 0; j < size; j++) {
+        for (j = 0; j < size; j++) {
 
             let aCell = document.createElement('div'); //create a cell div
                  aCell.id = 'cell' + j; 
-                    aCell.classList.add('cell');
+                 aCell.addEventListener('mouseover', changeRed);
+                 aCell.classList.add('cell');
 
             
                     aRow.appendChild(aCell); //add a cell to a row
@@ -68,7 +69,19 @@ function createAGrid(){
     
 
 
+    let grayscale = [ '#696969', '#707070', '#787878', '#808080', '	#888888', '#909090'];
 
+    
+    // document.addEventListener("mouseover", function () 
+    
+    function changeRed() {
+  
+        console.log('HaHA I do not know how it works!!!!');
+        
+        // document.getElementsById('cell' + j).style.background = 'red';
+
+    // document.querySelectorAll.style.background = grayscale[Math.floor(Math.random() * grayscale.length)];
+}
 
 
 

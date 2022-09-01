@@ -42,7 +42,7 @@ button {
   border: 0.01rem rgb(23, 101, 65) solid;
 }
 
-.cell:hover {
+/* .cell:hover {
   background-color: #1e1f19;
-  opacity: 0.6;
-}
+  opacity: 0.8;
+} */
