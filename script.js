@@ -2,6 +2,7 @@ const container = document.querySelector('#container');
 let size = 16;
 let j;
 
+let colour;
       
 let grayscale = [ '#696969', '#707070', '#787878', '#808080', '	#888888', '#909090'];
 let grayscaleRandom = grayscale[Math.floor(Math.random() * grayscale.length)];
@@ -32,7 +33,7 @@ function createAGrid(){
 
             let aCell = document.createElement('div'); //create a cell div
                  aCell.id = 'cell' + j; 
-                 aCell.addEventListener ('mouseover', colourChange);
+                 aCell.addEventListener ('mouseover', colourSquare);
                  aCell.classList.add('cell');
 
             
@@ -73,8 +74,13 @@ function createAGrid(){
 
     }
     
-    function colourChange()
+    function colourSquare()
         {
-            this.style.backgroundColor = rainbow[Math.floor(Math.random() * rainbow.length)];
+            this.style.backgroundColor = colour;
+    }
+
+    function colourChange(choice){
+
+        colour = choice;
 
     }
