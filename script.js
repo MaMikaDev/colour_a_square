@@ -4,6 +4,11 @@ let j;
 
       
 let grayscale = [ '#696969', '#707070', '#787878', '#808080', '	#888888', '#909090'];
+let grayscaleRandom = grayscale[Math.floor(Math.random() * grayscale.length)];
+
+let rainbow = ['#000099', '#00FF99', '#CC0099', '#CC6699', '#FF9999', '#FFFF99'];
+let rainbowRandom = rainbow[Math.floor(Math.random() * rainbow.length)];
+
 
 createAGrid(); //call create a grid with default value of 16
 
@@ -27,10 +32,7 @@ function createAGrid(){
 
             let aCell = document.createElement('div'); //create a cell div
                  aCell.id = 'cell' + j; 
-                 aCell.addEventListener ('mouseover', () => {
-                    aCell.style.backgroundColor = grayscale[Math.floor(Math.random() * grayscale.length)]
-                 });
-
+                 aCell.addEventListener ('mouseover', colourChange);
                  aCell.classList.add('cell');
 
             
@@ -71,3 +73,8 @@ function createAGrid(){
 
     }
     
+    function colourChange()
+        {
+            this.style.backgroundColor = rainbow[Math.floor(Math.random() * rainbow.length)];
+
+    }
