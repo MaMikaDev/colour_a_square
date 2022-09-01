@@ -11,6 +11,12 @@ body {
   background-color: rgb(242, 208, 245);
 }
 
+#container {
+  padding: 5em;
+  border-radius: 15%;
+  background-color: #000;
+}
+
 button {
   font-size: xx-large;
   padding: 5px;
@@ -19,6 +25,8 @@ button {
 }
 
 #grid {
+  padding: 3em;
+  border-radius: 5%;
   display: flex;
   flex-wrap: wrap;
   align-content: stretch;
