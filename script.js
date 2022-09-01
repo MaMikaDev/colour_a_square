@@ -77,8 +77,17 @@ function createAGrid(){
     function changeRed() {
   
         console.log('HaHA I do not know how it works!!!!');
+
+       let cells = document.getElementById('grid').querySelectorAll('div');
         
-        // document.getElementsById('cell' + j).style.background = 'red';
+       console.log(cells);
+
+       for (i = 0; i < cells.length; i++) {
+
+        cells[i].style.background = grayscale[Math.floor(Math.random() * grayscale.length)];
+
+       }
+        // document.getElementsById('cell' + j).style.backgroundColor = 'red';
 
     // document.querySelectorAll.style.background = grayscale[Math.floor(Math.random() * grayscale.length)];
 }
