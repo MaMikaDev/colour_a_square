@@ -14,10 +14,16 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgb(242, 208, 245);
+  background-color: rgb(241, 152, 200);
 }
 
 #header {
+  font-size: xxx-large;
+  color: rgb(16, 20, 24);
+  text-shadow: 0 0 4px #a2aef5, 0 0 6px #e479ce;
+}
+
+#instructions {
   font-size: larger;
 }
 
