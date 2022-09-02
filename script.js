@@ -1,11 +1,13 @@
 const container = document.querySelector('#container');
 let size = 16;
 let j;
+let cells;
 
 let color;
       
 let greyscale = [ '#696969', '#707070', '#787878', '#808080', '	#888888', '#909090'];
 let rainbow = ['#6495ED', '#00FF99', '#CC0099', '#CC6699', '#FF9999', '#FFFF99'];
+let party = ['#d30cb8', '#6df1d8', '#5c2c6d', '#5da4a6', '#b8aec8', '#3c345c']
 
 
 
@@ -81,12 +83,25 @@ function createAGrid(){
             this.style.backgroundColor = greyscale[Math.floor(Math.random() * greyscale.length)];
 
         }
-        else {
+        else if (color === 'black'){
 
             this.style.backgroundColor = 'black';
         }
+        else if (color === 'party'){
 
+            cells = document.getElementById('grid').querySelectorAll('div');
+
+            for (i = 0; i < cells.length; i++) {
+
+                cells[i].style.background = party[Math.floor(Math.random() * party.length)];
+        
+               }
         }
+        // else if (color === 'eraser'){
+
+        //     this.style.backgroundColor = rgb(79, 193, 64);;
+        // }
+    }
 
     function changeColor(choice) {
         color = choice;

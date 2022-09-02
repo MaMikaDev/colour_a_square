@@ -67,3 +67,27 @@ button:hover {
   border: 0.01rem rgb(23, 101, 65) solid;
   box-shadow: 1px 3px 5px rgb(44, 48, 164);
 }
+
+#footer {
+  margin-top: 2em;
+  font-size: large;
+  pad: 1em;
+}
+
+@media screen and (max-width: 426px) {
+  #grid {
+    width: 350px;
+    height: 800px;
+  }
+}
+
+@media screen and (max-width: 376px) {
+  #grid {
+    width: 300px;
+    height: 850px;
+  }
+
+  button {
+    margin: 2px;
+  }
+} ;
