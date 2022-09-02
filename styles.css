@@ -1,6 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+
 ::before,
 ::after {
   box-sizing: border-box;
+}
+
+html {
+  font-family: "Lobster", cursive;
 }
 
 body {
@@ -11,22 +17,32 @@ body {
   background-color: rgb(242, 208, 245);
 }
 
+#header {
+  font-size: larger;
+}
+
 #container {
-  padding: 5em;
-  border-radius: 15%;
+  border-radius: 5%;
   background-color: #000;
 }
 
 button {
+  border-radius: 3%;
+  font-family: "Lobster", cursive;
   font-size: xx-large;
   padding: 5px;
   margin: 5px;
-  box-shadow: 3px 5px 8px rgb(207, 51, 103);
+  box-shadow: 3px 5px 8px rgb(61, 58, 59);
+}
+
+button:hover {
+  background-color: rgb(48, 29, 47);
+  color: rgb(255, 255, 255);
 }
 
 #grid {
-  padding: 3em;
-  border-radius: 5%;
+  padding: 0.75em;
+  border-radius: 1%;
   display: flex;
   flex-wrap: wrap;
   align-content: stretch;
@@ -43,9 +59,11 @@ button {
 }
 
 .cell {
+  border-radius: 13%;
   flex: 1;
   display: flex;
   flex-wrap: wrap;
   background-color: rgb(79, 193, 64);
   border: 0.01rem rgb(23, 101, 65) solid;
+  box-shadow: 1px 3px 5px rgb(44, 48, 164);
 }

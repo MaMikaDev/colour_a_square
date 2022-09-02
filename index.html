@@ -10,16 +10,32 @@
     <script src="script.js" defer></script>
   </head>
   <body>
+    <div id="header">
+      Press on one of the buttons to choose the colour scheme and change the
+      size:
+    </div>
     <div id="buttons">
-      <button id="whatSize" class="btn" onclick="whatSize()">
-        Enter Your Size
+      <button
+        id="whatSize"
+        class="btn"
+        onclick="changeColor('black');whatSize()"
+      >
+        Black
       </button>
-      <!-- <button id="grey" class="btn" onclick="setColor(greyscale); whatSize(); ">
+      <button
+        id="grey"
+        class="btn"
+        onclick="changeColor('greyscale'); whatSize(); "
+      >
         Greyscale
       </button>
-      <button id="rainbow" class="btn" onclick="setColor(rainbow); whatSize();">
-        Rainbow
-      </button> -->
+      <button
+        id="rainbow"
+        class="btn"
+        onclick="changeColor('rainbow'); whatSize();"
+      >
+        Pastels
+      </button>
     </div>
     <div id="container"></div>
   </body>

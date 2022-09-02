@@ -5,10 +5,8 @@ let j;
 let color;
       
 let greyscale = [ '#696969', '#707070', '#787878', '#808080', '	#888888', '#909090'];
-let grayscaleRandom = greyscale[Math.floor(Math.random() * greyscale.length)];
+let rainbow = ['#6495ED', '#00FF99', '#CC0099', '#CC6699', '#FF9999', '#FFFF99'];
 
-let rainbow = ['#000099', '#00FF99', '#CC0099', '#CC6699', '#FF9999', '#FFFF99'];
-let rainbowRandom = rainbow[Math.floor(Math.random() * rainbow.length)];
 
 
 createAGrid(); //call create a grid with default value of 16
@@ -18,8 +16,8 @@ function createAGrid(){
     const grid = document.createElement('div'); // grid being created a new every time the createAGrid is run
     grid.id = 'grid';
 
-    let totalNum = size*size; //let the power of math work!
-    console.log(totalNum);
+    // let totalNum = size*size; //let the power of math work!
+    // console.log(totalNum);
 
 
     for (let i = 0; i < size; i++) {  //repat the process
@@ -76,5 +74,20 @@ function createAGrid(){
     
     function colorSquare()
     {
+        if(color === 'rainbow'){
        this.style.backgroundColor = rainbow[Math.floor(Math.random() * rainbow.length)];
+        }
+        else if (color === 'greyscale'){
+            this.style.backgroundColor = greyscale[Math.floor(Math.random() * greyscale.length)];
+
+        }
+        else {
+
+            this.style.backgroundColor = 'black';
+        }
+
+        }
+
+    function changeColor(choice) {
+        color = choice;
     }
