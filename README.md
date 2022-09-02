@@ -1,2 +1,3 @@
-# etchASketch
-etch a sketch mini practice
+# Etch a Square
+
+(Odin Project Assignment)
