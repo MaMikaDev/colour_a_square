@@ -87,6 +87,10 @@ function createAGrid(){
 
             this.style.backgroundColor = 'black';
         }
+        else if (color === 'eraser'){
+
+            this.style.backgroundColor = '#4fc140';
+        }
         else if (color === 'party'){
 
             cells = document.getElementById('grid').querySelectorAll('div');
@@ -97,10 +101,7 @@ function createAGrid(){
         
                }
         }
-        // else if (color === 'eraser'){
 
-        //     this.style.backgroundColor = rgb(79, 193, 64);;
-        // }
     }
 
     function changeColor(choice) {

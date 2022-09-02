@@ -69,9 +69,9 @@ button:hover {
   flex: 1;
   display: flex;
   flex-wrap: wrap;
-  background-color: rgb(79, 193, 64);
-  border: 0.01rem rgb(23, 101, 65) solid;
-  box-shadow: 1px 3px 5px rgb(44, 48, 164);
+  background-color: #4fc140;
+  border: 0.01rem #176541 solid;
+  box-shadow: 1px 3px 5px #2c30a4;
 }
 
 #footer {
