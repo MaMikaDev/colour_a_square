@@ -1,3 +1,3 @@
-# Etch a Square
+# Colour a Square
 
 (Odin Project Assignment)
